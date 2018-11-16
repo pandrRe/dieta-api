@@ -1,0 +1,20 @@
+{
+  "name": "dieta-api",
+  "version": "1.0.0",
+  "description": "API para Dieta Fácil",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "javascript-lp-solver": "^0.4.5",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "nodemon": "^1.18.6"
+  }
+}
