@@ -21,7 +21,7 @@ app.post('/dieta', async (req, res) => {
     }
 });
 
-app.post('/alimento/:id', async (req, res) => {
+app.get('/alimento/:id', async (req, res) => {
     try {
         const alimento = await workers.alimento.getAlimento(req.params.id, pool);
         res.send(alimento);
