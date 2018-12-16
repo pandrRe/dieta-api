@@ -1,5 +1,8 @@
+require('dotenv').config();
+
 const express = require('express');
 const pool = require('./db/database');
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
@@ -10,6 +13,9 @@ const workers = {
 };
 
 app.use(express.json());
+app.use(cors({
+    origin: process.env.ORIGIN,
+}));
 
 app.post('/dieta', async (req, res) => {
     try {

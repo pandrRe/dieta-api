@@ -28,7 +28,7 @@ const seeds = [
             ['gorduras_trans', 'g'],
             ['fibra_alimentar', 'g'],
             ['sodio', 'mg']
-        ]
+        ]   
     }
 ];
 

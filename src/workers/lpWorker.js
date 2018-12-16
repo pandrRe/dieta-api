@@ -23,16 +23,7 @@ const LinearProgrammingHelper = {
             finalData.ints[alimento.data.nome] = 1;
         }
 
-        finalData.constraints = {
-            valor_energetico: {min: data.valor_energetico.min, max: data.valor_energetico.max},
-            carboidratos: {min: data.carboidratos.min, max: data.carboidratos.max},
-            proteinas: {min: data.proteinas.min, max: data.proteinas.max},
-            gorduras_totais: {min: data.gorduras_totais.min, max: data.gorduras_totais.max},
-            gorduras_saturadas: {min: data.gorduras_saturadas.min, max: data.gorduras_saturadas.max},
-            gorduras_trans: {min: data.gorduras_trans.min, max: data.gorduras_trans.max},
-            fibra_alimentar: {min: data.fibra_alimentar.min, max: data.fibra_alimentar.max},
-            sodio: {min: data.sodio.min, max: data.sodio.max}
-        };
+        finalData.constraints = data.nutrientes;
 
         return finalData;
     }
@@ -52,7 +43,7 @@ const LinearProgrammingWorker = {
         };
 
         const solution = solver.Solve(model);
-        
+
         return JSON.stringify(solution);
     }
 };
